@@ -386,7 +386,7 @@ bool DepthCameraSensor::CreateCamera()
   this->dataPtr->near = near;
 
   // \todo(nkoeng) these parameters via sdf
-  this->dataPtr->depthCamera->SetAntiAliasing(2);
+  this->dataPtr->depthCamera->SetAntiAliasing(0);
 
   math::Angle angle = cameraSdf->HorizontalFov();
   if (angle < 0.01 || angle > IGN_PI*2)
